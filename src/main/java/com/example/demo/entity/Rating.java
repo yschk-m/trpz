@@ -1,5 +1,4 @@
 package com.example.demo.entity;
-package com.example.demo.entity;
 
 import javax.persistence.*;
 
@@ -17,8 +16,7 @@ public class Rating {
 
     }
 
-    public Rating(Integer id, Integer price, Integer quality, Integer service) {
-        this.id = id;
+    public Rating(Integer price, Integer quality, Integer service) {
         this.price = price;
         this.quality = quality;
         this.service = service;

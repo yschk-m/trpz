@@ -1,25 +1,21 @@
 package com.example.demo.entity;
 
 import javax.persistence.*;
-
 @Entity
 public class ServiceInfo {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Integer id;
 
-    @OneToOne(mappedBy = "serviceInfo")
-    private STO sto;
-    private String[] brands;
-    private String[] listOfServices;
-    private String[] additionalServices;
+    private String brands;
+    private String listOfServices;
+    private String additionalServices;
 
     public ServiceInfo(){
 
     }
 
-    public ServiceInfo(Integer id, String[] brands, String[] listOfServices, String[] additionalServices) {
-        this.id = id;
+    public ServiceInfo(String brands, String listOfServices, String additionalServices) {
         this.brands = brands;
         this.listOfServices = listOfServices;
         this.additionalServices = additionalServices;
@@ -33,27 +29,27 @@ public class ServiceInfo {
         this.id = id;
     }
 
-    public String[] getBrands() {
+    public String getBrands() {
         return brands;
     }
 
-    public void setBrands(String[] brands) {
+    public void setBrands(String brands) {
         this.brands = brands;
     }
 
-    public String[] getListOfServices() {
+    public String getListOfServices() {
         return listOfServices;
     }
 
-    public void setListOfServices(String[] listOfServices) {
+    public void setListOfServices(String listOfServices) {
         this.listOfServices = listOfServices;
     }
 
-    public String[] getAdditionalServices() {
+    public String getAdditionalServices() {
         return additionalServices;
     }
 
-    public void setAdditionalServices(String[] additionalServices) {
+    public void setAdditionalServices(String additionalServices) {
         this.additionalServices = additionalServices;
     }
 }
